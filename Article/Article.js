@@ -17,9 +17,18 @@ class Article {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
   this.article.classList.toggle('article-open')
   this.article.classList.toggle('close')
-  }
+  }  
 }
+function addElement () {    
+  let newDiv = document.createElement('div');    
+  
+  let newContent = document.createTextNode("I'm the NEW ARTICLE!!!!!!!!"); 
+  newDiv.appendChild(newContent);  
 
+   
+  let createdDiv = document.getElementsByClassName("article"); 
+  document.body.insertBefore(newDiv, createdDiv); 
+}
 /* START HERE: 
 
 - Select all classes named ".article" and assign that value to the articles variable.  
